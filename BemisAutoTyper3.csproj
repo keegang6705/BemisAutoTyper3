@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>col_studio.ico</ApplicationIcon>
+    <PackageIcon>col_studio.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="col_studio.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="col_studio.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

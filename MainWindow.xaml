@@ -1,0 +1,65 @@
+﻿<Window x:Class="BemisAutoTyper3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BemisAutoTyper3"
+        mc:Ignorable="d"
+        Title="BemisAutoTyper 2.0.0" Height="400" Width="400"
+        Icon="D:\keegang project\app\BemisAutoTyper\BemisAutoTyper\col_studio.ico"
+        Topmost="True">
+    <Grid Background="#333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <!--border-->
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="5"/>
+            <!--border-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <!--border-->
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="25"/>
+            <!--border-->
+        </Grid.ColumnDefinitions>
+        <TextBlock 
+            Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4"
+            Text="1&#x9;2&#x9;3&#x9;4&#x9;5&#x9;6&#x9;7&#x9;8&#x9;9&#x9;10&#x9;11&#x9;12&#x9;13&#x9;14&#x9;15&#x9;16&#x9;17&#x9;18&#x9;19&#x9;20&#x9;21&#x9;22&#x9;23&#x9;24&#x9;25&#x9;26&#x9;27&#x9;28&#x9;29&#x9;30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Center" Foreground="White"
+            Padding="2" FontSize="13.01"/>
+        <ScrollViewer 
+            Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" x:Name="lineNumbersScrollViewer"
+            VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
+
+            <TextBlock 
+                TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="13" 
+                Text="1 &#x20;&#xA;2 &#x20;&#xA;3 &#x20;&#xA;4 &#x20;&#xA;5 &#x20;&#xA;6 &#x20;&#xA;7 &#x20;&#xA;8 &#x20;&#xA;9 &#x20;&#xA;10 &#x20;&#xA;11 &#x20;&#xA;12 &#x20;&#xA;13 &#x20;&#xA;14 &#x20;&#xA;15 &#x20;&#xA;16 &#x20;&#xA;17 &#x20;&#xA;18 &#x20;&#xA;19 &#x20;&#xA;20 &#x20;&#xA;21 &#x20;&#xA;22 &#x20;&#xA;23 &#x20;&#xA;24 &#x20;&#xA;25 &#x20;&#xA;26 &#x20;&#xA;27 &#x20;&#xA;28 &#x20;&#xA;29 &#x20;&#xA;30 &#x20;&#xA;31 &#x20;&#xA;32 &#x20;&#xA;33 &#x20;&#xA;34 &#x20;&#xA;35 &#x20;&#xA;36 &#x20;&#xA;37 &#x20;&#xA;38 &#x20;&#xA;39 &#x20;&#xA;40 &#x20;&#xA;41 &#x20;&#xA;42 &#x20;&#xA;43 &#x20;&#xA;44 &#x20;&#xA;45 &#x20;&#xA;46 &#x20;&#xA;47 &#x20;&#xA;48 &#x20;&#xA;49 &#x20;&#xA;50 &#x20;&#xA;51 &#x20;&#xA;52 &#x20;&#xA;53 &#x20;&#xA;54 &#x20;&#xA;55 &#x20;&#xA;56 &#x20;&#xA;57 &#x20;&#xA;58 &#x20;&#xA;59 &#x20;&#xA;60 &#x20;&#xA;61 &#x20;&#xA;62 &#x20;&#xA;63 &#x20;&#xA;64 &#x20;&#xA;65 &#x20;&#xA;66 &#x20;&#xA;67 &#x20;&#xA;68 &#x20;&#xA;69 &#x20;&#xA;70 &#x20;&#xA;71 &#x20;&#xA;72 &#x20;&#xA;73 &#x20;&#xA;74 &#x20;&#xA;75 &#x20;&#xA;76 &#x20;&#xA;77 &#x20;&#xA;78 &#x20;&#xA;79 &#x20;&#xA;80 &#x20;&#xA;81 &#x20;&#xA;82 &#x20;&#xA;83 &#x20;&#xA;84 &#x20;&#xA;85 &#x20;&#xA;86 &#x20;&#xA;87 &#x20;&#xA;88 &#x20;&#xA;89 &#x20;&#xA;90 &#x20;&#xA;91 &#x20;&#xA;92 &#x20;&#xA;93 &#x20;&#xA;94 &#x20;&#xA;95 &#x20;&#xA;96 &#x20;&#xA;97 &#x20;&#xA;98 &#x20;&#xA;99 &#x20;&#xA;100"
+                Foreground="White" TextAlignment="Right" 
+                />
+        </ScrollViewer>
+
+        <ScrollViewer 
+            Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3"
+            VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+            ScrollChanged="TextBox_ScrollChanged">
+            <TextBox x:Name="DataTextBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                 TextWrapping="NoWrap" AcceptsReturn="True" AcceptsTab="True" 
+                 Text=""  
+                 Padding="0" FontSize="13"/>
+        </ScrollViewer>
+        <TextBox Grid.Column="2" HorizontalAlignment="Center" Margin="0,13,0,0" Grid.Row="3" Text="100" VerticalAlignment="Top" Width="101" Height="24" FontSize="14" Background="#FF202020" Foreground="White" SelectionTextBrush="Black" BorderBrush="White"
+                 x:Name="IntervalTextBox" LostFocus="IntervalTextBox_LostFocus"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="27" Width="76" Foreground="White" FontSize="16" Text="Interval (s)"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,49,0,0" Grid.Row="3" VerticalAlignment="Top" Height="27" Width="90" Foreground="White" FontSize="16" Text="Turbo Mode"/>
+        <ProgressBar x:Name="TypeProgressbar" Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="10" Grid.Row="5" VerticalAlignment="Center" Width="800"/>
+        <Button x:Name="StartButton" Grid.Column="2" Content="Start" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="35" Width="102" FontSize="20" BorderBrush="Black" Background="White" Foreground="Black" Click="StartButton_Click"/>
+        <CheckBox x:Name="TurboModeCheckBox" Grid.Column="2" HorizontalAlignment="Center" Margin="0,55,0,0" Grid.Row="3" VerticalAlignment="Top" Background="White" BorderBrush="Black" Checked="TurboModeCheckBox_Checked" Unchecked="TurboModeCheckBox_UnChecked" Foreground="White" IsChecked="False"/>
+
+    </Grid>
+</Window>
