@@ -9,14 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="col_studio.ico" />
+    <None Remove="col_studio.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="col_studio.png">
+    <Resource Include="col_studio.ico" />
+    <Resource Include="col_studio.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
+    </Resource>
   </ItemGroup>
 
 </Project>

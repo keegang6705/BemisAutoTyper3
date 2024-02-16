@@ -11,7 +11,7 @@ namespace BemisAutoTyper3
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /// 
+    /// dotnet publish -c Release --self-contained=true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true
 
 
     public partial class MainWindow : System.Windows.Window
@@ -23,7 +23,14 @@ namespace BemisAutoTyper3
         private const int KEYEVENTF_KEYUP = 0x0002;
         public MainWindow()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         private void TextBox_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
